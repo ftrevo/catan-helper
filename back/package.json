@@ -1,0 +1,23 @@
+{
+  "name": "catan-helper-back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "DEBUG=express:* node ./index.js",
+    "start": "DEBUG=express:* node ./index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "overrides": {
+    "@nut-tree/nut-js": {
+      "jpeg-js": "0.4.4"
+    }
+  },
+  "dependencies": {
+    "@nut-tree/nut-js": "^2.2.0",
+    "@nut-tree/template-matcher": "^1.0.1",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1"
+  }
+}

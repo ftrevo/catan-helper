@@ -1,0 +1,44 @@
+.gameStatistics {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  height: 35.5px;
+  width: calc(100% - 64px);
+  margin-bottom: 50px;
+}
+
+.statisticsBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: default;
+}
+
+.start {
+  border-radius: 15px 0 0 15px;
+}
+
+.end {
+  border-radius: 0 15px 15px 0;
+}
+
+.gameStatistics .brick {
+  background-color: FireBrick;
+}
+
+.gameStatistics .grain {
+  background-color: Goldenrod;
+}
+
+.gameStatistics .lumber {
+  background: Darkgreen;
+}
+
+.gameStatistics .ore {
+  background-color: DarkGrey;
+}
+
+.gameStatistics .wool {
+  background-color: LimeGreen;
+}

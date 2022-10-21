@@ -1,0 +1,13 @@
+.diceNumber {
+  position: absolute;
+  height: 44.2px;
+  width: 44.2px;
+  line-height: 44.2px;
+  border-radius: 30px;
+  background-color: white;
+  z-index: 7;
+  font-family: arial;
+  font-size: 30px;
+  top: calc(50% - 22.1px);
+  left: calc(50% - 22.1px);
+}

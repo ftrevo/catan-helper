@@ -1,0 +1,55 @@
+.vertex {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  color: white;
+  position: absolute;
+  z-index: 5;
+  border-radius: 50%;
+}
+  
+.vertex0 {
+  top: -75%;
+  left: calc(50% - 20px);
+}
+
+.vertex1 {
+  top: -25%;
+  right: -15%;
+}
+
+.vertex2 {
+  bottom: -25%;
+  right: -15%;
+}
+
+.vertex3 {
+  bottom: -75%;
+  left: calc(50% - 20px);
+}
+
+.vertex4 {
+  bottom: -25%;
+  left: -15%;
+}
+
+.vertex5 {
+  top: -25%;
+  left: -15%;
+}
+
+.best {
+  background-color: rgb(0, 0, 0);
+}
+
+.good {
+  background-color: rgb(75, 75, 75);
+}
+
+.medium {
+  background-color: rgb(125, 125, 125);
+}
+
+.bad {
+  background-color: rgb(200, 200, 200);
+}
