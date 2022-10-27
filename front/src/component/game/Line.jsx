@@ -1,6 +1,6 @@
 import Hexagon from './Hexagon'
 
-function Line({lineNumber, tiles, vertices}) {
+function Line({lineNumber, tiles, vertices, vertexOpts}) {
   return (
     <div id={`div-line-${lineNumber}`} className="tile-row">
       {
@@ -11,6 +11,7 @@ function Line({lineNumber, tiles, vertices}) {
             tile={tile} 
             hexagonNumber={tileIndex}
             vertices={vertices}
+            vertexOpts={vertexOpts}
           />
         ))
       }

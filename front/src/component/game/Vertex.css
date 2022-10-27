@@ -53,3 +53,53 @@
 .bad {
   background-color: rgb(200, 200, 200);
 }
+
+.black {
+  background-color: black;
+}
+
+.green {
+  background-color: lightgreen;
+  color: black;
+}
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.gold {
+  background-color: gold;
+  color: black
+}
+
+.mysticblue {
+  background-color: rgb(0, 195, 255);
+  color: black
+}
+
+.purple {
+  background-color: purple;
+}
+
+.pink {
+  background-color: pink;
+  color: black
+}
+
+.silver {
+  background-color: silver;
+  color: black
+}
+
+.white {
+  background-color: rgb(234, 234, 234);
+  color: black
+}

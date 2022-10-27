@@ -8,6 +8,15 @@ const { game } = require('../mocks/game');
 const app = express();
 app.use(express.json());
 
+app.use(function (_req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*'); // update to match the domain you will make the request from
+  res.header(
+    'Access-Control-Allow-Headers',
+    'Origin, X-Requested-With, Content-Type, Accept, ngrok-skip-browser-warning'
+  );
+  next();
+});
+
 app.get('/', async (_req, res) => {
   res.send('Server is up');
 });
@@ -19,14 +28,12 @@ app.get('/board', async (_req, res) => {
   const playerData = getPlayerResources(board.vertices);
   const statistics = getResourceStatistics(board.tiles);
 
-  res
-    .set('Access-Control-Allow-Origin', '*')
-    .send({ board, playerData, statistics });
+  res.send({ board, playerData, statistics });
 });
 
 app.get('/mock', async (_req, res) => {
   console.log('/mock called', new Date().toISOString());
-  res.set('Access-Control-Allow-Origin', '*').send(game);
+  res.send(game);
 });
 
 module.exports = app;

@@ -1,6 +1,6 @@
 const { screen, imageResource } = require('@nut-tree/nut-js');
 const { tiles: screenTiles, vertices } = require('./tiles');
-const { waitFor } = require('./utils');
+const { waitFor, roadConnections } = require('./utils');
 const getBoard = require('./board');
 
 require('@nut-tree/template-matcher');
@@ -41,6 +41,8 @@ const buildings = [
   'buildings/red_settlement.png',
   'buildings/orange_city.png',
   'buildings/orange_settlement.png',
+  'buildings/purple_city.png',
+  'buildings/purple_settlement.png',
 ];
 
 const findByImageName = async (
@@ -120,7 +122,7 @@ const getTileData = async (tile) => {
 };
 
 const getVerticesData = async (vertex, position) => {
-  const found = { position };
+  const found = { position, neighbors: roadConnections[position] };
   const buildingFound = await findBuildings(vertex, position);
 
   if (buildingFound) {

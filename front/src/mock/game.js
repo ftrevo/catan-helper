@@ -27,6 +27,7 @@ const game = {
         tiles: [{ position: 0, resource: 'brick', number: '11', value: 2 }],
         value: 2,
         neighbors: [3, 4],
+        buildingNeighbor: false,
       },
       {
         position: 1,
@@ -35,6 +36,7 @@ const game = {
         tiles: [{ position: 1, resource: 'brick', number: '4', value: 3 }],
         value: 3,
         neighbors: [4, 5],
+        buildingNeighbor: false,
       },
       {
         position: 2,
@@ -49,6 +51,7 @@ const game = {
         tiles: [{ position: 0, resource: 'brick', number: '11', value: 2 }],
         value: 2,
         neighbors: [7, 0],
+        buildingNeighbor: true,
       },
       {
         position: 4,
@@ -58,6 +61,7 @@ const game = {
         ],
         value: 5,
         neighbors: [0, 1, 8],
+        buildingNeighbor: true,
       },
       {
         position: 5,
@@ -67,12 +71,14 @@ const game = {
         ],
         value: 8,
         neighbors: [1, 2, 9],
+        buildingNeighbor: true,
       },
       {
         position: 6,
         tiles: [{ position: 2, resource: 'lumber', number: '8', value: 5 }],
         value: 5,
         neighbors: [2, 10],
+        buildingNeighbor: true,
       },
       {
         position: 7,
@@ -84,6 +90,7 @@ const game = {
         ],
         value: 3,
         neighbors: [3, 11, 12],
+        buildingNeighbor: false,
       },
       {
         position: 8,
@@ -96,6 +103,7 @@ const game = {
         ],
         value: 10,
         neighbors: [4, 12, 13],
+        buildingNeighbor: false,
       },
       {
         position: 9,
@@ -108,6 +116,7 @@ const game = {
         ],
         value: 10,
         neighbors: [5, 13, 14],
+        buildingNeighbor: false,
       },
       {
         position: 10,
@@ -119,12 +128,14 @@ const game = {
         ],
         value: 8,
         neighbors: [6, 14, 15],
+        buildingNeighbor: true,
       },
       {
         position: 11,
         tiles: [{ position: 3, resource: 'ore', number: '12', value: 1 }],
         value: 1,
         neighbors: [7, 16],
+        buildingNeighbor: true,
       },
       {
         position: 12,
@@ -135,6 +146,7 @@ const game = {
         ],
         value: 8,
         neighbors: [7, 8, 17],
+        buildingNeighbor: true,
       },
       {
         position: 13,
@@ -145,6 +157,7 @@ const game = {
         ],
         value: 10,
         neighbors: [8, 9, 18],
+        buildingNeighbor: true,
       },
       {
         position: 14,
@@ -155,12 +168,14 @@ const game = {
         ],
         value: 10,
         neighbors: [9, 10, 19],
+        buildingNeighbor: true,
       },
       {
         position: 15,
         tiles: [{ position: 6, resource: 'wool', number: '10', value: 3 }],
         value: 3,
         neighbors: [10, 20],
+        buildingNeighbor: true,
       },
       {
         position: 16,
@@ -170,6 +185,7 @@ const game = {
         ],
         value: 5,
         neighbors: [11, 21, 22],
+        buildingNeighbor: true,
       },
       {
         position: 17,
@@ -180,6 +196,7 @@ const game = {
         ],
         value: 10,
         neighbors: [12, 22, 23],
+        buildingNeighbor: true,
       },
       {
         position: 18,
@@ -190,6 +207,7 @@ const game = {
         ],
         value: 9,
         neighbors: [13, 23, 24],
+        buildingNeighbor: true,
       },
       {
         position: 19,
@@ -202,6 +220,7 @@ const game = {
         ],
         value: 5,
         neighbors: [14, 24, 25],
+        buildingNeighbor: false,
       },
       {
         position: 20,
@@ -213,6 +232,7 @@ const game = {
         ],
         value: 7,
         neighbors: [15, 25, 26],
+        buildingNeighbor: false,
       },
       {
         position: 21,
@@ -221,6 +241,7 @@ const game = {
         tiles: [{ position: 7, resource: 'lumber', number: '9', value: 4 }],
         value: 4,
         neighbors: [16, 27],
+        buildingNeighbor: false,
       },
       {
         position: 22,
@@ -233,6 +254,7 @@ const game = {
         ],
         value: 9,
         neighbors: [16, 17, 28],
+        buildingNeighbor: false,
       },
       {
         position: 23,
@@ -245,6 +267,7 @@ const game = {
         ],
         value: 11,
         neighbors: [17, 18, 29],
+        buildingNeighbor: false,
       },
       {
         position: 24,
@@ -255,6 +278,7 @@ const game = {
         ],
         value: 4,
         neighbors: [18, 19, 30],
+        buildingNeighbor: true,
       },
       {
         position: 25,
@@ -265,18 +289,21 @@ const game = {
         ],
         value: 7,
         neighbors: [19, 20, 31],
+        buildingNeighbor: true,
       },
       {
         position: 26,
         tiles: [{ position: 11, resource: 'wool', number: '5', value: 4 }],
         value: 4,
         neighbors: [20, 32],
+        buildingNeighbor: true,
       },
       {
         position: 27,
         tiles: [{ position: 7, resource: 'lumber', number: '9', value: 4 }],
         value: 4,
         neighbors: [21, 33],
+        buildingNeighbor: true,
       },
       {
         position: 28,
@@ -287,6 +314,7 @@ const game = {
         ],
         value: 11,
         neighbors: [22, 33, 34],
+        buildingNeighbor: true,
       },
       {
         position: 29,
@@ -297,6 +325,7 @@ const game = {
         ],
         value: 9,
         neighbors: [23, 34, 35],
+        buildingNeighbor: true,
       },
       {
         position: 30,
@@ -307,6 +336,7 @@ const game = {
         ],
         value: 6,
         neighbors: [24, 35, 36],
+        buildingNeighbor: true,
       },
       {
         position: 31,
@@ -317,6 +347,7 @@ const game = {
         ],
         value: 5,
         neighbors: [25, 36, 37],
+        buildingNeighbor: true,
       },
       {
         position: 32,
@@ -325,6 +356,7 @@ const game = {
         tiles: [{ position: 11, resource: 'wool', number: '5', value: 4 }],
         value: 4,
         neighbors: [36, 37],
+        buildingNeighbor: false,
       },
       {
         position: 33,
@@ -336,6 +368,7 @@ const game = {
         ],
         value: 7,
         neighbors: [27, 28, 38],
+        buildingNeighbor: false,
       },
       {
         position: 34,
@@ -346,6 +379,7 @@ const game = {
         ],
         value: 10,
         neighbors: [28, 29, 39],
+        buildingNeighbor: true,
       },
       {
         position: 35,
@@ -358,6 +392,7 @@ const game = {
         ],
         value: 9,
         neighbors: [29, 30, 40],
+        buildingNeighbor: false,
       },
       {
         position: 36,
@@ -370,6 +405,7 @@ const game = {
         ],
         value: 5,
         neighbors: [30, 31, 41],
+        buildingNeighbor: false,
       },
       {
         position: 37,
@@ -379,12 +415,14 @@ const game = {
         ],
         value: 5,
         neighbors: [31, 32, 42],
+        buildingNeighbor: true,
       },
       {
         position: 38,
         tiles: [{ position: 12, resource: 'lumber', number: '10', value: 3 }],
         value: 3,
         neighbors: [33, 43],
+        buildingNeighbor: true,
       },
       {
         position: 39,
@@ -397,6 +435,7 @@ const game = {
         ],
         value: 11,
         neighbors: [34, 43, 44],
+        buildingNeighbor: false,
       },
       {
         position: 40,
@@ -407,6 +446,7 @@ const game = {
         ],
         value: 9,
         neighbors: [35, 44, 45],
+        buildingNeighbor: true,
       },
       {
         position: 41,
@@ -417,12 +457,14 @@ const game = {
         ],
         value: 10,
         neighbors: [36, 45, 46],
+        buildingNeighbor: true,
       },
       {
         position: 42,
         tiles: [{ position: 15, resource: 'grain', number: '2', value: 1 }],
         value: 1,
         neighbors: [37, 47],
+        buildingNeighbor: true,
       },
       {
         position: 43,
@@ -432,6 +474,7 @@ const game = {
         ],
         value: 8,
         neighbors: [38, 39, 47],
+        buildingNeighbor: true,
       },
       {
         position: 44,
@@ -442,6 +485,7 @@ const game = {
         ],
         value: 10,
         neighbors: [39, 40, 48],
+        buildingNeighbor: true,
       },
       {
         position: 45,
@@ -454,6 +498,7 @@ const game = {
         ],
         value: 11,
         neighbors: [40, 41, 49],
+        buildingNeighbor: false,
       },
       {
         position: 46,
@@ -465,12 +510,14 @@ const game = {
         ],
         value: 6,
         neighbors: [41, 42, 50],
+        buildingNeighbor: false,
       },
       {
         position: 47,
         tiles: [{ position: 16, resource: 'wool', number: '8', value: 5 }],
         value: 5,
         neighbors: [43, 51],
+        buildingNeighbor: true,
       },
       {
         position: 48,
@@ -480,6 +527,7 @@ const game = {
         ],
         value: 7,
         neighbors: [44, 51, 52],
+        buildingNeighbor: true,
       },
       {
         position: 49,
@@ -489,12 +537,14 @@ const game = {
         ],
         value: 7,
         neighbors: [45, 52, 53],
+        buildingNeighbor: true,
       },
       {
         position: 50,
         tiles: [{ position: 18, resource: 'ore', number: '6', value: 5 }],
         value: 5,
         neighbors: [46, 53],
+        buildingNeighbor: true,
       },
       {
         position: 51,
@@ -503,6 +553,7 @@ const game = {
         tiles: [{ position: 16, resource: 'wool', number: '8', value: 5 }],
         value: 5,
         neighbors: [47, 48],
+        buildingNeighbor: false,
       },
       {
         position: 52,
@@ -511,6 +562,7 @@ const game = {
         tiles: [{ position: 17, resource: 'wool', number: '3', value: 2 }],
         value: 2,
         neighbors: [48, 49],
+        buildingNeighbor: false,
       },
       {
         position: 53,
@@ -519,6 +571,7 @@ const game = {
         tiles: [{ position: 18, resource: 'ore', number: '6', value: 5 }],
         value: 5,
         neighbors: [49, 50],
+        buildingNeighbor: false,
       },
     ],
   },
@@ -581,6 +634,4 @@ const game = {
   },
 };
 
-module.exports = {
-  game,
-};
+module.exports = game;
