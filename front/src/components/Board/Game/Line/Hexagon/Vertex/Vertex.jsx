@@ -1,5 +1,3 @@
-import './Vertex.css'
-
 const getSvgImage = (color, building, number) => {
   return <span id={`span-vertex-${number}`}>
     <img key={`${color}-${building}-${number}`} id={`${color}-${building}`} src={`assets/${building}_${color}.svg`} alt={`${color} ${building}`} className={`vertex vertex${number}`}/>
@@ -13,7 +11,7 @@ const getVertexCssColor = (value) => {
   return 'bad'  
 }
 
-function Vertex({number, vertex, vertexOpts}) {
+export const Vertex = ({number, vertex, vertexOpts}) => {
   if(vertexOpts.showBuildings && vertex.owner){
     return getSvgImage(vertex.owner, vertex.building, number)
   }
@@ -26,5 +24,3 @@ function Vertex({number, vertex, vertexOpts}) {
     )
   }
 }
-
-export default Vertex

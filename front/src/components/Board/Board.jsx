@@ -1,12 +1,10 @@
-import { useGameData } from '../hooks/useGameData';
-import { useDisplayData } from '../hooks/useDisplayData';
-import Game from './game/Game';
-import PlayerData from './statistics/PlayerData';
-import ResourceOdds from './statistics/ResourceOdds'
-import Control from './Control'
-import './Board.css'
+import { useGameData, useDisplayData } from '../../hooks';
+import { Game } from './Game';
+import { PlayerData } from './PlayerData';
+import { ResourceOdds } from './ResourceOdds';
+import { Control } from './Control'
 
-export default function Board() {
+export const Board = () => {
   const [{ ready, loading, data }, load] = useGameData()
   const [displayState, toggleBuildings, toggleBlockedVertices] = useDisplayData()
 

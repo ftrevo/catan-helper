@@ -1,6 +1,6 @@
-import Hexagon from './Hexagon'
+import { Hexagon } from './Hexagon'
 
-function Line({lineNumber, tiles, vertices, vertexOpts}) {
+export const Line = ({lineNumber, tiles, vertices, vertexOpts}) => {
   return (
     <div id={`div-line-${lineNumber}`} className="tile-row">
       {
@@ -18,5 +18,3 @@ function Line({lineNumber, tiles, vertices, vertexOpts}) {
     </div>
   )
 }
-
-export default Line

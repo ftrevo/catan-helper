@@ -1,13 +1,11 @@
-import './Control.css'
-
-function Control({
+export const Control = ({
   showBuildings, 
   toggleBuildings, 
   showBlockedVertices, 
   toggleBlockedVertices,
   loading,
   load,
-}) {
+}) => {
   return (
     <div key='control-board' id='control-board' className='controlBoard'>
       <button key='button-load' className='button' disabled={loading} onClick={load}>Fetch game data</button>
@@ -24,5 +22,3 @@ function Control({
     </div>
   )
 }
-
-export default Control

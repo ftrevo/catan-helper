@@ -1,10 +1,8 @@
-import './PlayerData.css'
-
 const getSvgImage = (color, building, index) => {
   return <img key={`${color}${building}${index}`} id={`${color}${building}`} src={`assets/${building}_${color}.svg`} alt={`${color} ${building}`} className="buildingImg"/>
 }
 
-function PlayerData({players}) {
+export const PlayerData = ({players}) => {
   return (
     Object.entries(players).map(([color, data]) => {
     return (<div key={`player-${color}`} id={`player-${color}`} className="playerData">
@@ -85,5 +83,3 @@ function PlayerData({players}) {
     })
   )
 }
-
-export default PlayerData

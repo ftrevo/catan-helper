@@ -1,6 +1,5 @@
-import Vertex from './Vertex'
-import DiceNumber from './DiceNumber'
-import './Hexagon.css'
+import { Vertex } from './Vertex'
+import { DiceNumber } from './DiceNumber'
 
 const initials = [
   [0, 4, 8, 12, 7, 3],
@@ -38,9 +37,9 @@ const getVertex2EdgeCases = (vertices, lineNumber, hexagonNumber, vertexOpts) =>
   }
 }
 
-function Hexagon({tile, hexagonNumber, vertices, lineNumber, vertexOpts}) {
+export const Hexagon = ({tile, hexagonNumber, vertices, lineNumber, vertexOpts}) => {
   return (
-      <div id={`div-hexagon-${hexagonNumber}`} className={`hexagon ${tile.resource}`}>
+      <div id={`div-hexagon-${hexagonNumber}`} className={`hexagon ${tile.resource ?? 'desert'}`}>
         <DiceNumber key={'dice-number'} number={tile.number} />
         <Vertex key={0} number={0} vertex={getVertex(vertices, lineNumber, 0, hexagonNumber)} vertexOpts={vertexOpts}/>
         <Vertex key={1} number={1} vertex={getVertex(vertices, lineNumber, 1, hexagonNumber)} vertexOpts={vertexOpts}/>
@@ -51,5 +50,3 @@ function Hexagon({tile, hexagonNumber, vertices, lineNumber, vertexOpts}) {
     </div>
   )
 }
-
-export default Hexagon

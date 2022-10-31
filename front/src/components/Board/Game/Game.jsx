@@ -1,7 +1,6 @@
-import './Game.css'
-import Line from './Line'
+import { Line } from './Line'
 
-function Game({tiles, vertices, vertexOpts}) {
+export const Game = ({tiles, vertices, vertexOpts}) => {
   return (
     <div key="game" id="game" className="game">
       <Line key="line0" tiles={tiles.slice(0, 3)} vertices={vertices} lineNumber="0" vertexOpts={vertexOpts} />
@@ -12,5 +11,3 @@ function Game({tiles, vertices, vertexOpts}) {
     </div>
   )
 }
-
-export default Game
