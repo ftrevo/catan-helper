@@ -13,11 +13,25 @@ export const Control = ({
         <span id='span-vertex'>
           <img src='assets/city_white.svg' className='controlCity'/>
         </span>
-        <input key='building-toggle' className='input' type="checkbox" id="switch-building" checked={showBuildings} onChange={toggleBuildings} /><label className='label' htmlFor="switch-building"></label>
+        <input 
+          key='building-toggle' 
+          id='switch-building' 
+          className='input' 
+          type='checkbox'
+          checked={showBuildings} 
+          onChange={toggleBuildings} />
+            <label className='label' htmlFor="switch-building" />
       </div>
       <div className='grouper'>
         <span className='controlVertex'>X</span>
-        <input key='vertices-toggle' className='input' type="checkbox" id="switch-vertex" checked={showBlockedVertices} onChange={toggleBlockedVertices} /><label className='label' htmlFor="switch-vertex"></label>
+        <input 
+          key='vertices-toggle'
+          className='input' 
+          type="checkbox" 
+          id="switch-vertex" 
+          checked={showBlockedVertices} 
+          onChange={toggleBlockedVertices} />
+            <label className='label' htmlFor="switch-vertex" />
       </div>
     </div>
   )

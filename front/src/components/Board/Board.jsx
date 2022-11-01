@@ -6,7 +6,11 @@ import { Control } from './Control'
 
 export const Board = () => {
   const [{ ready, loading, data }, load] = useGameData()
-  const [displayState, toggleBuildings, toggleBlockedVertices] = useDisplayData()
+  const [
+    { showBuildings, showBlockedVertices },
+    toggleBuildings,
+    toggleBlockedVertices,
+  ] = useDisplayData()
 
   console.log(data)
 
@@ -14,13 +18,13 @@ export const Board = () => {
     <div key='board' id='board' className='board'>
       <div key='game-board' id='game-board' className='gameBoard'>
         { ready && <ResourceOdds statistics={data.statistics} /> }
-        { ready && <Game tiles={data.board.tiles} vertices={data.board.vertices} vertexOpts={displayState} /> }
+        { ready && <Game tiles={data.board.tiles} vertices={data.board.vertices} vertexOpts={{showBuildings, showBlockedVertices}} /> }
       </div>
       <div key='data-board' id='data-board' className='dataBoard'>
         <Control 
-          showBuildings={displayState.showBuildings} 
+          showBuildings={showBuildings}
           toggleBuildings={toggleBuildings}
-          showBlockedVertices={displayState.showBlockedVertices}
+          showBlockedVertices={showBlockedVertices}
           toggleBlockedVertices={toggleBlockedVertices}
           loading={loading}
           load={load}
